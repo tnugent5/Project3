@@ -36,10 +36,9 @@ public class TeamAdaptor extends RecyclerView.Adapter<TeamAdaptor.TeamsViewHolde
         holder.mTeamItemView.setText(mCurrent);
     }
 
-
-
-
-    public int getItemCount() {return mTeamsList.size();}
+    public int getItemCount() {
+        return mTeamsList.size();
+    }
 
     class TeamsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView mTeamItemView;
