@@ -1,6 +1,7 @@
 package com.example.nba;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.content.Intent;
 import android.view.View;
@@ -53,6 +54,9 @@ public class TeamAdaptor extends RecyclerView.Adapter<TeamAdaptor.TeamsViewHolde
         public void onClick(View v) {
             Intent intent = new Intent(context, Team.class);
             context.startActivity(intent);
+            Log.d("Inside Click", "Inside click");
+            FetchTeam ft = new FetchTeam(intent, context);
+            ft.execute("14");
         }
     }
 }
